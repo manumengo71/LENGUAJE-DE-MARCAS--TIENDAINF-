@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME PAGE</title>
+  <title>Inicio</title>
   <link rel="stylesheet" href="../css/index.css">
 </head>
 
@@ -14,17 +14,48 @@
   <!-- MENÚ BARRA ARRIBA -->
   <header>
     <div class="logo">
-      <h1>Tienda de Informática GRUPO 6</h1>
+      <img src="../../public/images/logo.png" alt="Logo">
     </div>
+
     <nav>
       <ul>
-        <li><a href="/resources/views/index.html">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="../views/index.html">Inicio</a></li>
+        <li>
+          <a href="#">Productos</a>
+          <ul>
+            <li><a href="../../resources/views/auth/ordenadores.html">Ordenadores</a></li>
+            <li><a href="../../resources/views/auth/teclados.html">Teclados</a></li>
+            <li><a href="../views/auth/portatiles.html">Portatiles</a></li>
+            <li><a href="../views/auth/ratones.html">Ratones</a></li>
+            <li><a href="../views/auth/placasbase.html">Placa base</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Servicios</a>
+          <ul>
+            <li><a href="#">Cambio de piezas</a></li>
+            <li><a href="#">Reparación/Formatear</a></li>
+            <li><a href="#">Mantenimiento</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contacto</a>
+          <ul>
+            <li><a href="#">Devolución</a></li>
+            <li><a href="#">Atención al cliente</a></li>
+            <li><a href="#">Postventa</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Donde estamos</a></li>
+        <li><a href="../views/auth/login.html">Iniciar sesión</a></li>
       </ul>
     </nav>
   </header>
+
+
+  <div class="slider">
+    <img src="../../public/images/slider.jpg" alt="Slider" id="slider">
+  </div>
 
   <!-- MENÚ IZQUIERDA -->
   <div class="container">
@@ -42,19 +73,19 @@
       <h2>Últimos Productos</h2>
       <div class="productos">
         <div class="producto">
-          <img src="../../app/public/images/GATO.png" alt="Producto 1">
+          <img src="../../public/images/GATO.png" alt="Producto 1">
           <h3>Producto 1</h3>
           <p>HOLA</p>
           <a href="#">Comprar</a>
         </div>
         <div class="producto">
-          <img src="../../app/public/images/GATO.png" alt="Producto 2">
+          <img src="../../public/images/GATO.png" alt="Producto 2">
           <h3>Producto 2</h3>
           <p>HOLA2</p>
           <a href="#">Comprar</a>
         </div>
         <div class="producto">
-          <img src="../../app/public/images/GATO.png" alt="Producto 3">
+          <img src="../../public/images/GATO.png" alt="Producto 3">
           <h3>Producto 3</h3>
           <p>HOLA3.</p>
           <a href="#">Comprar</a>
@@ -67,10 +98,6 @@
   <footer>
     <p>Tienda de Informática © 2023</p>
   </footer>
-</body>
-
-</html>
-
 </body>
 
 </html>
