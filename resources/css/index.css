@@ -15,17 +15,28 @@
         color: #fff;
         display: flex;
         justify-content: space-between;
-        padding: 10px 20px;
+        align-items: center;
+        height: 120px;
+        padding: 0 20px;
+    }
+
+
+      .logo img {
+        width: 100px;
+        height: 100px;
+      }
+
+      #login a {
+        color: #fff;
+        font-size: 16px;
+        margin-left: 300px;
+        text-decoration: none;
     }
 
     .container,
     aside,
     main {
         min-height: 82vh;
-    }
-
-    .logo h1 {
-        font-size: 1.8em;
     }
 
     nav ul {
@@ -139,34 +150,172 @@
         font-size: 0.8em;
     }
 
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
+    .login {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
     }
 
-    aside {
-        flex-basis: 100%;
-        margin-bottom: 20px;
+    .login label {
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
     }
 
-    main {
-        flex-basis: 100%;
+    .login input[type="text"],
+    .login input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
     }
 
-    .producto {
-        flex-basis: calc(50% - 20px);
+    .login button[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .login button[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    /* Estilos para el slider */
+    .slider {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slider img {
+        flex: 1;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        aside {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+
+        main {
+            flex-basis: 100%;
+        }
+
+        .producto {
+            flex-basis: calc(50% - 20px);
+        }
+    }
+
+    /* Menú desplegable */
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+      }
+
+      nav ul li:hover > ul {
+        display: inherit;
+      }
+
+      nav ul {
+        display: flex;
+        position: relative;
+        list-style: none;
+      }
+
+      nav ul li {
+        flex: 1;
+        text-align: center;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      nav ul ul {
+        top: 100%;
+        left: 0;
+        background-color: #333;
+      }
+
+      nav ul ul li {
+        width: 100%;
+      }
+
+      nav ul ul li a {
+        padding: 10px 20px;
+      }
+
+      nav ul ul ul {
+        top: 0;
+        left: 100%;
+      }
     }
 
 
-}
-
-@media screen and (max-width: 480px) {
-    .produco {
-        flex-basis: calc(100% - 20px);
+    @media screen and (max-width: 480px) {
+        .producto {
+            flex-basis: calc(100% - 20px);
+        }
     }
 
 
-}
 
+
+
+
+    
+      .producto-compra {
+        display: flex;
+        margin: 20px;
+        width: 600px;
+      }
+      
+      .imagen {
+        flex: 1;
+        text-align: right;
+      }
+      
+      .imagen img {
+        max-width: 100%;
+        max-height: 600px;
+      }
+      
+      .descripcion {
+        flex: 1;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      
+      .descripcion h2 {
+        margin-top: 0;
+      }
+      
+      .descripcion p {
+        margin-bottom: 10px;
+      }
+      
+      #mensaje {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        background-color: #c6f0c6;
+        padding: 10px;
+      }
+      
+      .hidden {
+        display: none;
+      }
+      
