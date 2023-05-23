@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perfil de Empleado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .profile h2 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .profile p {
+            margin: 5px 0;
+            color: #666;
+        }
+        
+        .profile .employee-id {
+            color: #999;
+        }
+        
+        .profile .field-label {
+            font-weight: bold;
+        }
+        
+        .profile .field-value {
+            margin-left: 10px;
+        }
+        
+        .list-container {
+            margin-top: 20px;
+        }
+        
+        .list-container ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: #666;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        form input[type="text"],
+        form input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        form button {
+            padding: 10px 20px;
+            background-color: #0366d6;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        form button:hover {
+            background-color: #025aa5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Perfil de Empleado</h1>
+        <div class="profile">
+            <img src="ruta/a/la/imagen.jpg" alt="Foto de perfil">
+            <div>
+                <h2>Nombre del Empleado</h2>
+                <p class="employee-id">ID de Empleado: 12345</p>
+                <p>
+                    <span class="field-label">DNI:</span>
+                    <span class="field-value">12345678A</span>
+                </p>
+                <p>
+                    <span class="field-label">Sexo:</span>
+                    <span class="field-value">Masculino</span>
+                </p>
+                <p>
+                    <span class="field-label">Teléfono:</span>
+                    <span class="field-value">123456789</span>
+                </p>
+                <p>
+                    <span class="field-label">Tipo de Empleado:</span>
+                    <span class="field-value">Dependiente</span>
+                </p>
+                <p>
+                    <span class="field-label">¿Es Jefe?</span>
+                    <span class="field-value">No</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="list-container">
+            <h3>Pedidos Atendidos</h3>
+            <ul>
+                <li>Pedido 1</li>
+                <li>Pedido 2</li>
+                <li>Pedido 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

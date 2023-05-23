@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pedidos Realizados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .order {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .order h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .order p {
+            margin: 5px 0;
+            color: #666;
+        }
+        
+        .order .field-label {
+            font-weight: bold;
+        }
+        
+        .order .field-value {
+            margin-left: 10px;
+        }
+        
+        .order table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        
+        .order th,
+        .order td {
+            padding: 8px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pedidos Realizados</h1>
+
+        <div class="order">
+            <h3>Pedido #12345</h3>
+            <p>
+                <span class="field-label">Fecha:</span>
+                <span class="field-value">2023-05-23</span>
+            </p>
+            <p>
+                <span class="field-label">Cliente:</span>
+                <span class="field-value">John Doe</span>
+            </p>
+            <p>
+                <span class="field-label">Dirección de Envío:</span>
+                <span class="field-value">Calle Principal 123, Ciudad, País</span>
+            </p>
+
+            <h3>Productos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>Marca: XYZ<br>Procesador: Intel i7<br>Memoria RAM: 16GB</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Monitor</td>
+                        <td>Tamaño: 24 pulgadas<br>Resolución: 1920x1080</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <span class="field-label">Observaciones:</span>
+                <span class="field-value">Ninguna</span>
+            </p>
+            <p>
+                <span class="field-label">Total:</span>
+                <span class="field-value">$2499.99</span>
+            </p>
+        </div>
+
+        <div class="order">
+            <h3>Pedido #54321</h3>
+            <p>
+                <span class="field-label">Fecha:</span>
+                <span class="field-value">2023-05-22</span>
+            </p>
+            <p>
+                <span class="field-label">Cliente:</span>
+                <span class="field-value">Jane Smith</span>
+            </p>
+            <p>
+                <span class="field-label">Dirección de Envío:</span>
+                <span class="field-value">Avenida Principal 456, Ciudad, País</span>
+            </p>
+
+            <h3>Productos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Teclado</td>
+                        <td>Tipo: Inalámbrico<br>Idioma: Español</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>Color: Negro<br>Tipo: Óptico</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <span class="field-label">Observaciones:</span>
+                <span class="field-value">Entregar en horario de la mañana</span>
+            </p>
+            <p>
+                <span class="field-label">Total:</span>
+                <span class="field-value">$159.96</span>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
