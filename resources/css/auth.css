@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/vector-premium/linea-fondo-azul-claro-baja-poli-fondo-tecnologia-puntos_292608-19257.jpg?w=2000');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+      margin-top: 10%;
+     
+      
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .divs-contenedores {
+    margin-bottom: 20px;
+  }
+  
+  .divs-contenedores label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .divs-contenedores input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .divs-contenedores button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .divs-contenedores button:hover {
+    background-color: #45a049;
+  }
+
+  .auth-link{
+    font-size: smaller;
+    position: relative;
+    margin-left: 290px;
+  }
+  .auth-link-iniciosesion{
+    margin-left: 280px;
+  }
