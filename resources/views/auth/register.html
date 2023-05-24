@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>REGISTER PAGE</title>
     <link rel="stylesheet" href="../../css/auth.css">
 </head>
+
 <body>
     <div class="container">
         <h1>Registrarse</h1>
-        <form>
+        <form id="registration-form">
             <div class="divs-contenedores">
                 <label for="username">Nombre de usuario</label>
                 <input type="text" id="username" name="username" placeholder="User" required>
@@ -32,6 +34,14 @@
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••••••••••"
                     required>
             </div>
+            <div class="divs-contenedores">
+                <label for="rol">¿Que eres?</label>
+                <select id="rol" name="rol" required>
+                    <option value="cliente">Cliente</option>
+                    <option value="empleado">Empleado</option>
+                    <option value="inma">Inma maestra 11/10</option>
+                </select>
+            </div>
             <div class="">
                 <div class="checkbox-group">
                     <input type="checkbox" id="terms" name="terms" required>
@@ -48,4 +58,48 @@
         </form>
     </div>
 </body>
+
+<!-- SCRIPT GUARDAR DATOS --
+--
+-->
+
+<script>
+
+    var registrationForm = document.getElementById('registration-form');
+
+
+    registrationForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var date = document.getElementById('date').value;
+        var password = document.getElementById('password').value;
+        var confirm = document.getElementById('confirm-password').value;
+        var rol = document.getElementById('rol').value;
+
+        if(password === confirm){
+            var user = {
+            username: username,
+            email: email,
+            date: date,
+            password: password,
+            rol: rol
+        };
+
+        localStorage.setItem('userData', JSON.stringify(user));
+
+        console.log(user);
+
+        localStorage.setItem('user', JSON.stringify(user));
+
+
+        window.location.href = 'login.html';
+
+        }else{
+            alert('La contraseña y la confirmación de contraseña no coinciden. Inténtelo de nuevo');
+        }
+    });
+</script>
+
 </html>
