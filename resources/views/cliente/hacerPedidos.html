@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -18,22 +18,22 @@
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         h1 {
             text-align: center;
             color: #333;
         }
-        
+
         form {
             margin-top: 20px;
         }
-        
+
         form label {
             display: block;
             margin-bottom: 5px;
             color: #333;
         }
-        
+
         form select,
         form textarea,
         form input[type="text"],
@@ -44,7 +44,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        
+
         form button {
             padding: 10px 20px;
             background-color: #0366d6;
@@ -53,20 +53,20 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        
+
         form button:hover {
             background-color: #025aa5;
         }
-        
+
         #selected-products {
             margin-top: 20px;
         }
-        
+
         #selected-products table {
             width: 100%;
             border-collapse: collapse;
         }
-        
+
         #selected-products th,
         #selected-products td {
             padding: 8px;
@@ -82,19 +82,19 @@
 
         <form id="order-form">
             <label for="products">Productos:</label>
-            <select id="products" name="products">
-                <option value="laptop">Laptop</option>
-                <option value="monitor">Monitor</option>
-                <option value="keyboard">Teclado</option>
-                <option value="mouse">Mouse</option>
-                <option value="printer">Impresora</option>
+            <select id="products" name="products" required>
+                <option value="Laptop">Laptop</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Impresora">Impresora</option>
             </select>
 
             <label for="quantity">Cantidad:</label>
-            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <input type="number" id="quantity" name="quantity" min="1" value="" required>
 
             <label for="observations">Observaciones:</label>
-            <textarea id="observations" name="observations" rows="4"></textarea>
+            <textarea id="observations" name="observations" rows="4" maxlength="255" style="resize: none;"></textarea> <!-- NO ES OBLIGATORIO-->
 
             <button type="button" id="add-product">Agregar Producto</button>
 
@@ -119,14 +119,27 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+
+        document.getElementById('add-product').addEventListener('click', function () {
+            var cantidad = document.getElementById('quantity').value;
+
+            if (cantidad === "") {
+                alert('Cantidad no puede estar vacia');
+            } else if (cantidad < 0) {
+                alert('La cantidad no puede ser negativa');
+            } else if (cantidad > 20) {
+                alert('La cantidad no puede ser mayor a 20');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
             var addProductButton = document.getElementById('add-product');
             var productsList = document.getElementById('products-list');
             var totalInput = document.getElementById('total');
 
             var products = [];
 
-            addProductButton.addEventListener('click', function() {
+            addProductButton.addEventListener('click', function () {
                 var productsSelect = document.getElementById('products');
                 var quantityInput = document.getElementById('quantity');
 
@@ -187,9 +200,7 @@
             }
 
             function getProductPrice(product) {
-                // Aquí puedes definir los precios de los productos informáticos seleccionados.
-                // Puedes utilizar un objeto o un switch para mapear los productos a sus respectivos precios.
-                // Por simplicidad, utilizaremos valores fijos de precios para los ejemplos.
+
                 switch (product) {
                     case 'laptop':
                         return 999.99;
@@ -208,12 +219,8 @@
 
             var orderForm = document.getElementById('order-form');
 
-            orderForm.addEventListener('submit', function(event) {
+            orderForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-
-                // Aquí puedes agregar la lógica para enviar el pedido al servidor o realizar cualquier otra acción necesaria.
-
-                // Reiniciar el formulario y la lista de productos seleccionados.
                 products = [];
                 updateSelectedProducts();
                 clearInputs();
