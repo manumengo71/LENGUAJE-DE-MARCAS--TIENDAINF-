@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta Estante</title>
+    <link rel="stylesheet" href="../../../css/empleados.css" type="text/css"/>
 </head>
 
 <body>
-    <div>
+    <div class="nav">
         <h1>Alta Estante</h1>
-        <a href="./altas.html">
+        <a href="./altas.html" class="enlace">
             <p>Volver Atras</p>
         </a>
     </div>
-    <div>
-        <form method="" action="" id="estanteForm">
+    <div class="container">
+        <form class="alta" method="" action="" id="estanteForm">
             <legend>Alta Estante</legend>
             <label>Id Estante</label>
             <input type="number" id="idEstante" min="1" required />
@@ -28,10 +29,10 @@
             <input type="number" id="idProducto" min="1" required />
             <br />
             <label>Cantidad Producto</label>
-            <input type="number" id="cantidadProducto" min="0" max="255" required />
-            <br />
-            <input type="submit" value="Enviar" onclick="enviarFormulario(event)" />
-            <input type="button" value="Borrar" />
+            <input type="number"  id="cantidadProducto" min="0" max="255" required/>
+            <br/>
+            <input type="submit" value="Enviar" onclick="enviarFormulario(event)" class="boton"/>
+            <input type="submit" value="Borrar"  class="boton"/>
         </form>
     </div>
 </body>

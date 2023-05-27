@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta Almacen</title>
+    <link rel="stylesheet" href="../../../css/empleados.css" type="text/css"/>
 </head>
 
 <body>
-    <div>
+    <div class="nav">
         <h1>Alta Almacen</h1>
-        <a href="./altas.html">
+        <a href="./altas.html" class="enlace">
             <p>Volver Atras</p>
         </a>
     </div>
-    <div>
-        <form id="almacenForm">
+    <div class="container">
+        <form id="almacenForm" class="alta">
             <legend>Alta Almacen</legend>
+            <br/>
             <label>Id Almacen</label>
             <input type="number" id="idAlmacen" min="1" required />
             <br />
@@ -27,8 +29,8 @@
             <label>Numero Estantes</label>
             <input type="number" id="numeroEstantes" min="0" required />
             <br />
-            <input type="submit" value="Enviar" onclick="enviarFormulario(event)" />
-            <input type="button" value="Borrar" onclick="borrarFormulario()" />
+            <input type="submit" value="Enviar" onclick="enviarFormulario(event)"  class="boton" />
+            <input type="button" value="Borrar" onclick="borrarFormulario()"   class="boton"/>
         </form>
     </div>
 </body>
