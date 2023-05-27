@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta Establecimiento</title>
+    <link rel="stylesheet" href="../../../css/empleados.css" type="text/css"/>
 </head>
 <body>
-    <div>
+    <div class="nav">
         <h1>Alta Establecimiento</h1>
-        <a href="./altas.html">
+        <a href="./altas.html" class="enlace">
             <p>Volver Atras</p>
         </a>
     </div>
-    <div>
-        <form>
+    <div class="container">
+        <form class="alta">
             <legend> Alta Establecimiento</legend>
+            <br/>
                 <label>Id Estblecimiento</label>
                 <input type="text"  required/>
                 <br/>
@@ -31,8 +33,9 @@
                 <label>Telefono Establecimeinto</label>
                 <input type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"/>
-                <input type="submit" value="Enviar"/>
-                <input type="submit" value="Borrar"/>
+                <br/>
+                <input type="submit" value="Enviar"  class="boton"/>
+                <input type="submit" value="Borrar"  class="boton"/>
         </form>
     </div>
 </body>
