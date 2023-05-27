@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta Almacen</title>
 </head>
+
 <body>
     <div>
         <h1>Alta Almacen</h1>
@@ -14,20 +16,43 @@
         </a>
     </div>
     <div>
-        <form>
+        <form id="almacenForm">
             <legend>Alta Almacen</legend>
             <label>Id Almacen</label>
-            <input type="text"  required/>
-            <br/>
+            <input type="number" id="idAlmacen" min="1" required />
+            <br />
             <label>Metros cuadrados</label>
-            <input type="number"  required/>
-            <br/>
+            <input type="number" id="metrosCuadrados" min="0" required />
+            <br />
             <label>Numero Estantes</label>
-            <input type="number"  required/>
-            <br/>
-            <input type="submit" value="Enviar"/>
-            <input type="submit" value="Borrar"/>
+            <input type="number" id="numeroEstantes" min="0" required />
+            <br />
+            <input type="submit" value="Enviar" onclick="enviarFormulario(event)" />
+            <input type="button" value="Borrar" onclick="borrarFormulario()" />
         </form>
     </div>
 </body>
+
+<!-- VALIDACIÓN -->
+<script>
+
+    function enviarFormulario(event) {
+
+        const idAlmacen = parseInt(document.getElementById('idAlmacen').value);
+        const metrosCuadrados = parseInt(document.getElementById('metrosCuadrados').value);
+        const numeroEstantes = parseInt(document.getElementById('numeroEstantes').value);
+
+        if (idAlmacen < 1 || metrosCuadrados < 0 || numeroEstantes < 0) {
+            alert('No puede haber valores negativos');
+            return;
+        }
+
+        if (numeroEstantes > Math.floor(metrosCuadrados / 10) * 5) {
+            alert('El número de estantes supera el máximo permitido. Solo 5 por cada 10 metros cuadrados');
+            return;
+        }
+
+    }
+</script>
+
 </html>

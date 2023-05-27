@@ -22,7 +22,7 @@
         <li><a href="../views/index.html">Inicio</a></li>
         <li>
           <a href="#">Productos</a>
-          <ul>
+          <ul style="position: absolute; margin-left: 90px" ;>
             <li><a href="../views/productos/ordenadores.html">Ordenadores</a></li>
             <li><a href="../views/productos/teclados.html">Teclados</a></li>
             <li><a href="../views/productos/portatiles.html">Portatiles</a></li>
@@ -32,15 +32,16 @@
         </li>
         <li>
           <a href="#">Servicios</a>
-          <ul>
+          <ul style="position: absolute; margin-left: 180px" ;>
             <li><a href="#">Cambio de piezas</a></li>
             <li><a href="#">Reparación/Formatear</a></li>
             <li><a href="#">Mantenimiento</a></li>
+            <li><a href="../views/empleados/altas/altas.html">Altas</a></li>
           </ul>
         </li>
         <li>
           <a href="#">Contacto</a>
-          <ul>
+          <ul style="position: absolute; margin-left: 290px" ;>
             <li><a href="#">Devolución</a></li>
             <li><a href="#">Atención al cliente</a></li>
             <li><a href="#">Postventa</a></li>
@@ -69,26 +70,27 @@
     </aside>
 
     <!-- CONTENIDO A CAMBIAR DE LA PÁGINA -->
-    <main>
+    <main style="padding: 100px;">
       <h2>Últimos Productos</h2>
-      <div class="productos">
-        <div class="producto">
-          <img src="../../public/images/GATO.png" alt="Producto 1">
-          <h3>Producto 1</h3>
-          <p>HOLA</p>
-          <a href="#">Comprar</a>
-        </div>
-        <div class="producto">
-          <img src="../../public/images/GATO.png" alt="Producto 2">
-          <h3>Producto 2</h3>
-          <p>HOLA2</p>
-          <a href="#">Comprar</a>
-        </div>
-        <div class="producto">
-          <img src="../../public/images/GATO.png" alt="Producto 3">
-          <h3>Producto 3</h3>
-          <p>HOLA3.</p>
-          <a href="#">Comprar</a>
+      <div class="productos-container">
+        <div class="productos">
+          <div class="producto">
+            <a class="antes" style=" position: absolute; margin-left: -90px; margin-top: 100px;">&#8249;</a>
+            <img src="../../app/public/images/ordenador1.png" alt="Producto 1">
+            <h3>Ordenador sobremesa gaming GAMEPC R5-560</h3>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="producto">
+            <img src="../../app/public/images/teclado1.png" alt="Producto 2">
+            <h3>Gamer K300 QWERY</h3>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="producto">
+            <a class="siguiente" style=" position: absolute; margin-left: 280px; margin-top: 100px;">&#8250;</a>
+            <img src="../../app/public/images/portatil1.png" alt="Producto 3">
+            <h3>Lenovo IdeaPad 3</h3>
+            <a href="#">Comprar</a>
+          </div>
         </div>
       </div>
     </main>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta Producto</title>
 </head>
+
 <body>
     <div>
         <h1>Alta Producto</h1>
@@ -14,23 +16,56 @@
         </a>
     </div>
     <div>
-        <form>
+        <form method="" action="" id="productoForm">
             <legend>Alta Producto</legend>
             <label>Id Producto</label>
-            <input type="text"  required/>
-            <br/>
-            <label>Descripcion</label>
-            <textarea></textarea>
-            <br/>
+            <input type="number" id="idProducto" min="1" required />
+            <br />
+            <label>Descripción</label>
+            <textarea id="descripcion" maxlength="255"></textarea>
+            <br />
             <label>Precio Compra</label>
-            <input type="number"  required/>
-            <br/>
+            <input type="number" id="precioCompra" min="0" required />
+            <br />
             <label>Precio Venta</label>
-            <input type="number"  required/>
-            <br/>
-            <input type="submit" value="Enviar"/>
-            <input type="submit" value="Borrar"/>
+            <input type="number" id="precioVenta" min="0" required />
+            <br />
+            <input type="submit" value="Enviar" onclick="enviarFormulario(event)" />
+            <input type="button" value="Borrar" />
         </form>
     </div>
 </body>
+
+
+<!-- VALIDACIÓN -->
+
+<script>
+
+    function enviarFormulario(event) {
+
+        const idProducto = parseInt(document.getElementById('idProducto').value);
+        const descripcion = document.getElementById('descripcion').value;
+        const precioCompra = parseFloat(document.getElementById('precioCompra').value);
+        const precioVenta = parseFloat(document.getElementById('precioVenta').value);
+
+
+        if (idProducto < 1) {
+            alert('El campo Id Producto debe ser mayor o igual a 1.');
+            return;
+        }
+
+        if (descripcion.length > 255) {
+            alert('La descripción no puede tener más de 255 caracteres.');
+            return;
+        }
+
+        if (precioCompra < 0 || precioVenta < 0) {
+            alert('El precio de compra y el precio de venta no pueden ser valores negativos.');
+            return;
+        }
+    }
+
+
+</script>
+
 </html>
